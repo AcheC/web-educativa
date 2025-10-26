@@ -1,3 +1,5 @@
+'use client';
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from 'next/link';
 import { dmSans } from './fonts';
@@ -38,16 +40,38 @@ export default function OffersSection() {
         <div className="absolute inset-0 bg-black/20" />
     </div>
 
+      {/* Capa de fade con gradiente */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
   {/* Contenido de la sección */}
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2
-      id="offers-heading"
-      className="text-center md:text-4xl font-bold text-white"
-    >
-      Ofertas Académicas
-    </h2>
+        {/* 👇 Título animado de bienvenida */}
+        <motion.h2
+          id="offers-heading"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[var(--color-primary-dark)] via-[var(--color-muted)] to-[var(--color-primary)] text-transparent bg-clip-text"
+        >
+          ¡Bienvenidos a la Unidad Educativa ITSI Chone!
+        </motion.h2>
+        {/* 👇 Subtítulo opcional */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mt-4 text-[var(--color-surface)] text-lg md:text-xl font-medium"
+        >
+          Formación académica con excelencia, innovación y valores.
+        </motion.p>
 
-    <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-20">
+    <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-20"
+        >
       {CARD_ITEMS.map((item) => (
         <article
           key={item.href}
@@ -78,7 +102,7 @@ export default function OffersSection() {
           </Link>
         </article>
       ))}
-    </div>
+    </motion.div>
   </div>
 </section>
 
