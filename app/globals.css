@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-dark: #9f111b;
+  --color-primary: #b11623;
+  --color-primary-light: #C62828;
+  --color-text-card: #1F2937;
+  --color-text-secondary: #292c37;
+  --color-muted: #6B7280;
+  --color-bg-card: #cccccc;
+  --color-surface: #F3F4F6;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #292c37;
+    --color-text: #ededed;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility to force contrast for navbar links if needed */
+.navbar-link-strong { color: var(--color-text); }
+.navbar-link-strong:hover { color: var(--color-primary); }
+
+/* Title animation: subtle pop on load + hover lift */
+
+@keyframes title-pop {
+  0% { transform: translateY(-12px) scale(0.95); opacity: 0; }
+  60% { transform: translateY(0) scale(1.06); opacity: 1; }
+ 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.title-animate {
+  animation: title-pop 700ms cubic-bezier(.16,.84,.24,1) both;
+}
+
+.title-hover {
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), color .18s ease, letter-spacing .18s ease;
+}
+
+.title-hover:hover {
+  transform: translateY(-6px) scale(1.1);
+  color: var(--color-primary-light);
+  letter-spacing: 0.2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-animate { animation: none; }
+}
