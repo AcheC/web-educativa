@@ -16,8 +16,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="mt-16 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] text-white">
-      <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="mt-16 w-full overflow-hidden bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] text-[var(--color-surface)]">
+      <div className="mx-auto max-w-7xl sm:py-4 lg:py-12 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-full bg-white/70 flex items-center justify-center">

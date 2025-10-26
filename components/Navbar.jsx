@@ -43,7 +43,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-24 w-24 mr-3 rounded-full bg-[var(--color-surface)] p-1 shadow-sm flex items-center justify-center">
+            <div className="relative h-12 w-12 md:h-24 md:w-24 mr-3 rounded-full bg-[var(--color-surface)] p-1 shadow-sm flex items-center justify-center">
               <Image 
                 src="/logo-itsi.png" 
                 alt="Logo ITSI" 
@@ -52,7 +52,7 @@ export default function Navbar() {
                 className="object-contain rounded-full" 
               />
             </div>
-            <span className={`${dmSans.className} font-bold text-xl text-[var(--color-surface)] title-animate title-hover`}>Unidad Educativa ITSI Chone</span>
+            <span className={`${dmSans.className} font-bold text-base md:text-xl text-[var(--color-surface)] title-animate title-hover`}>Unidad Educativa ITSI Chone</span>
           </Link>
 
           {/* Desktop menu */}

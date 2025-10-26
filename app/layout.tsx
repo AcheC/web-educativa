@@ -20,7 +20,11 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <Navbar />
-        <main className="pt-30">{children}</main>
+        <main className="
+            min-h-screen snap-y snap-mandatory overflow-y-auto pt-16 md:pt-28
+          ">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

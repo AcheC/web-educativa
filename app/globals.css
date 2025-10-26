@@ -30,6 +30,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Scroll snapping: el body será el contenedor de scroll y cada <section> hará snap al inicio */
+html, body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  /* Ajuste por defecto para mobile (ajusta si tu navbar es más alto) */
+  scroll-padding-top: 64px;
+}
+
+@media (min-width: 768px) {
+  html, body {
+    /* header más alto en pantallas mayores */
+    scroll-padding-top: 112px;
+  }
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 /* Utility to force contrast for navbar links if needed */
 .navbar-link-strong { color: var(--color-text); }
 .navbar-link-strong:hover { color: var(--color-primary); }
