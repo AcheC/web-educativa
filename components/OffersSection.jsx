@@ -45,17 +45,17 @@ export default function OffersSection() {
 
   {/* Contenido de la sección */}
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* 👇 Título animado de bienvenida */}
+        {/* Título animado de bienvenida */}
         <motion.h2
           id="offers-heading"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[var(--color-primary-dark)] via-[var(--color-muted)] to-[var(--color-primary)] text-transparent bg-clip-text"
+          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[var(--color-primary-dark)] via-[var(--color-bg-card)] to-[var(--color-primary)] text-transparent bg-clip-text"
         >
           ¡Bienvenidos a la Unidad Educativa ITSI Chone!
         </motion.h2>
-        {/* 👇 Subtítulo opcional */}
+        {/* Subtítulo opcional */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -40,7 +40,7 @@ export default function AcademicSection() {
     ];
 
     return (
-        <section id="academic-offers" className={`${dmSans.className} relative w-full overflow-hidden min-h-[580px] inset-x-0 py-16 bg-[var(--color-bg-card)]`}> 
+        <section id="academic-offers" className={`light-section ${dmSans.className} relative w-full overflow-hidden min-h-[580px] inset-x-0 py-16 bg-white/75`}> 
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-11 gap-8 place-items-stretch">
                     {/* Left column: heading + description */}

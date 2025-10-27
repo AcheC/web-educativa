@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-full bg-white/70 flex items-center justify-center">
-              <Image src="/logo-itsi.png" alt="ITSI" width={36} height={36} />
+              <Image src="/logo-itsi.png" alt="ITSI" width={45} height={45} />
             </div>
             <span className="font-bold text-lg">Unidad Educativa ITSI Chone</span>
           </div>

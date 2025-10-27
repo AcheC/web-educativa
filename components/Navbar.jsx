@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { dmSans } from './fonts';
 
@@ -16,6 +16,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [onLightSection, setOnLightMode] = useState(false);
 
   useEffect(() => {
     function onKey(e) {
@@ -38,6 +39,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Detectar si el navbar está sobre una sección clara u oscura
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // si el navbar toca una sección clara, cambia el color del texto
+          if (entry.isIntersecting) {
+            setOnLightMode(entry.target.classList.contains('light-section'));
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    const sections = document.querySelectorAll('section');
+    sections.forEach((sec) => observer.observe(sec));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
   <header className={`fixed inset-x-0 top-0 z-50 backdrop-blur-sm transition-colors duration-300 ${scrolled ? 'bg-[rgba(255,255,255,0.06)] border-b border-white/10' : 'bg-transparent border-b-0'}`}>
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
@@ -52,7 +72,15 @@ export default function Navbar() {
                 className="object-contain rounded-full" 
               />
             </div>
-            <span className={`${dmSans.className} font-bold text-base md:text-xl text-[var(--color-surface)] title-animate title-hover`}>Unidad Educativa ITSI Chone</span>
+            <span
+              className={`${dmSans.className} font-bold text-base md:text-xl transition-colors duration-300 ${
+                onLightSection
+                  ? 'text-[var(--color-primary)]'
+                  : 'text-[var(--color-surface)]'
+              }`}
+            >
+              Unidad Educativa ITSI Chone
+            </span>
           </Link>
 
           {/* Desktop menu */}
@@ -61,7 +89,11 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="group text-[var(--color-surface)] hover:text-brand-600 font-medium focus:outline-none focus:ring-2 focus:ring-brand-300 rounded"
+                  className={`group font-medium focus:outline-none focus:ring-2 focus:ring-brand-300 rounded transition-colors duration-300 ${
+                    onLightSection
+                      ? 'text-[var(--color-primary-dark)] hover:text-[var(--color-primary-light)]'
+                      : 'text-[var(--color-surface)] hover:text-brand-600'
+                  }`}
                 >
                   <span className={`${dmSans.className} relative inline-block pb-1`}>
                     {item.label}
