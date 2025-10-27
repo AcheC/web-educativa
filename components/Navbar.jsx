@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { dmSans } from './fonts';
+import { usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Inicio' },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [onLightSection, setOnLightMode] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     function onKey(e) {
@@ -41,22 +43,32 @@ export default function Navbar() {
 
   // Detectar si el navbar está sobre una sección clara u oscura
   useEffect(() => {
+    const sections = document.querySelectorAll('.light-section');
+    if(sections.length == 0){
+      // Si no hay secciones claras en la nueva ruta
+      setOnLightSection(false);
+    return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           // si el navbar toca una sección clara, cambia el color del texto
           if (entry.isIntersecting) {
-            setOnLightMode(entry.target.classList.contains('light-section'));
+            setOnLightMode(true);
+          }
+          else {
+            setOnLightMode(false);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
-    const sections = document.querySelectorAll('section');
+
     sections.forEach((sec) => observer.observe(sec));
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
   <header className={`fixed inset-x-0 top-0 z-50 backdrop-blur-sm transition-colors duration-300 ${scrolled ? 'bg-[rgba(255,255,255,0.06)] border-b border-white/10' : 'bg-transparent border-b-0'}`}>
@@ -92,7 +104,7 @@ export default function Navbar() {
                   className={`group font-medium focus:outline-none focus:ring-2 focus:ring-brand-300 rounded transition-colors duration-300 ${
                     onLightSection
                       ? 'text-[var(--color-primary-dark)] hover:text-[var(--color-primary-light)]'
-                      : 'text-[var(--color-surface)] hover:text-brand-600'
+                      : 'text-[var(--color-surface)]'
                   }`}
                 >
                   <span className={`${dmSans.className} relative inline-block pb-1`}>

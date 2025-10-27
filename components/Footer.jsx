@@ -27,11 +27,11 @@ export default function Footer() {
           </div>
           <p className="text-sm text-white/90">Formando líderes con valores y talento tecnológico. Educación desde inicial hasta bachillerato.</p>
           <div className="flex gap-3 mt-2">
-            <a href="#" className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20">
-              <img src="/icons/facebook.svg" alt="Facebook" className="h-5 w-5" />
+            <a href="https://www.facebook.com/people/Unidad-Educativa-ITSI-CHONE/100039950594756/" className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20">
+              <Image src="/icons/facebook.svg" alt='Facebook' width={30} height={30} />
             </a>
-            <a href="#" className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20">
-              <img src="/icons/instagram.svg" alt="Instagram" className="h-5 w-5" />
+            <a href="https://www.instagram.com/ue_itsichone/" className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20">
+              <Image src="/icons/instagram.svg" alt='Instagram' width={25} height={25} />
             </a>
           </div>
         </div>
