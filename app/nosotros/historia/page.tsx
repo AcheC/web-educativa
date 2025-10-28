@@ -41,6 +41,7 @@ export default function HistoriaITSI() {
                     width={600}
                     height={400}
                     className="rounded-xl shadow-2xl object-cover w-full"
+                    priority
                 />
                 </motion.div>
 

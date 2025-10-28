@@ -63,7 +63,7 @@ export default function AcademicSection() {
                                     <div className="flex-shrink-0">
                                         {item.img ? (
                                             <div className="relative h-60 w-60 rounded-full overflow-hidden bg-white/5">
-                                                <Image src={`/${item.img}`} alt={item.title} fill className="object-cover" />
+                                                <Image src={`/${item.img}`} alt={item.title} fill className="object-cover" priority sizes="(max-width: 768px) 200px, 240px"/>
                                             </div>
                                         ) : (
                                             <div className="h-12 w-12 rounded-full bg-[var(--color-primary-dark)]/10 flex items-center justify-center text-[var(--color-primary)]">

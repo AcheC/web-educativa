@@ -110,7 +110,7 @@ export default function AboutUS() {
             </section>
 
             {/* Quick stats / CTA */}
-            <section className="py-12 bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary)] text-white">
+            <section className="py-12 bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary)] text-surface">
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <h3 className="text-2xl font-semibold">¿Quieres saber más?</h3>
                     <p className="mt-3">Visítanos, conoce nuestros programas y descubre cómo formar parte de la comunidad ITSI.</p>

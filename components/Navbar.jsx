@@ -46,7 +46,7 @@ export default function Navbar() {
     const sections = document.querySelectorAll('.light-section');
     if(sections.length == 0){
       // Si no hay secciones claras en la nueva ruta
-      setOnLightSection(false);
+      setOnLightMode(false);
     return;
     }
 
@@ -82,6 +82,7 @@ export default function Navbar() {
                 width={100} 
                 height={100} 
                 className="object-contain rounded-full" 
+                priority
               />
             </div>
             <span

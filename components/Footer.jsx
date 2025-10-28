@@ -43,7 +43,7 @@ export default function Footer() {
               <li><a href="#" className="hover:underline">Inicio</a></li>
               <li><a href="#academic-offers" className="hover:underline">Oferta educativa</a></li>
               <li><a href="#" className="hover:underline">Admisiones</a></li>
-              <li><a href="#" className="hover:underline">Contacto</a></li>
+              <li><a href="/contactos" className="hover:underline">Contacto</a></li>
             </ul>
           </div>
 
