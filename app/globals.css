@@ -32,7 +32,6 @@ body {
 
 /* Scroll snapping: el body será el contenedor de scroll y cada <section> hará snap al inicio */
 html, body {
-  scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   /* Ajuste por defecto para mobile (ajusta si tu navbar es más alto) */
   scroll-padding-top: 64px;
