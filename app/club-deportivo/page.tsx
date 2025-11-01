@@ -77,7 +77,7 @@ export default function ClubDeportivoPage() {
       </div>
 
       {/* GALERÍA */}
-      <div className="bg-[var(--color-surface)] py-16">
+      <div className="light-section bg-[var(--color-surface)] py-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
