@@ -1,9 +1,4 @@
-import { Playfair_Display,DM_Sans } from "next/font/google";
-
-export const playfairDisplay = Playfair_Display({
-    subsets: ["latin"],
-    display: "swap",
-});
+import { DM_Sans } from "next/font/google";
 
 export const dmSans = DM_Sans({
     subsets: ["latin"],
