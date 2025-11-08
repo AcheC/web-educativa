@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="h-12 w-12 rounded-full bg-white/70 flex items-center justify-center">
               <Image src="/logo-itsi.png" alt="ITSI" width={45} height={45} />
             </div>
-            <span className="font-bold text-lg">Unidad Educativa ITSI Chone</span>
+            <span className="font-bold text-lg">Unidad Educativa Particular ITSI Chone</span>
           </div>
           <p className="text-sm text-white/90">Formando líderes con valores y talento tecnológico. Educación desde inicial hasta bachillerato.</p>
           <div className="flex gap-3 mt-2">

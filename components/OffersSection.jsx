@@ -51,9 +51,9 @@ export default function OffersSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[var(--color-primary-dark)] via-[var(--color-bg-card)] to-[var(--color-primary)] text-transparent bg-clip-text"
+          className="text-3xl md:text-5xl text-center font-extrabold bg-gradient-to-r from-[var(--color-primary-dark)] via-[var(--color-bg-card)] to-[var(--color-primary)] text-transparent bg-clip-text"
         >
-          ¡Bienvenidos a la Unidad Educativa ITSI Chone!
+          ¡Bienvenidos a la Unidad Particular Educativa ITSI Chone!
         </motion.h2>
         {/* Subtítulo opcional */}
         <motion.p

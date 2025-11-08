@@ -11,24 +11,14 @@ export default function AdmisionHero(){
             icon: "/icons/pc.svg",
         },
         {
-            title: "Electromecánica Automotriz",
-            desc: "Desarrolla habilidades para el mantenimiento y diagnóstico de sistemas automotrices.",
-            icon: "/icons/engine.svg",
+            title: "Ciencias",
+            desc: "Descubre, experimenta y comprende la naturaleza. La ciencia es la clave para innovar y construir un mejor mañana.",
+            icon: "/icons/science.svg",
         },
         {
             title: "Contabilidad y Administración",
             desc: "Forma tu futuro profesional con conocimientos contables, financieros y empresariales.",
             icon: "/icons/accounting.svg",
-        },
-        {
-            title: "Turismo",
-            desc: "Descubre la cultura, la atención al cliente y la gestión de servicios turísticos.",
-            icon: "/icons/tourism.svg",
-        },
-        {
-            title: "Ventas y Marketing",
-            desc: "Aprende estrategias de ventas, atención al cliente y promoción de productos.",
-            icon: "/icons/sales.svg",
         },
         {
             title: "Deportes",

@@ -92,7 +92,7 @@ export default function Navbar() {
                   : 'text-[var(--color-surface)]'
               }`}
             >
-              Unidad Educativa ITSI Chone
+              Unidad Educativa Particular ITSI Chone
             </span>
           </Link>
 
