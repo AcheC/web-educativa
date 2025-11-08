@@ -124,7 +124,7 @@ export default function Navbar() {
               aria-controls="mobile-menu"
               aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
               onClick={() => setIsOpen((v) => !v)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              className="inline-flex items-center justify-center rounded-md p-2 text-[var(--color-surface)] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300"
             >
               {isOpen ? (
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
